@@ -35,13 +35,13 @@ func main() {
 	S = "qwerty"
 	fmt.Println(string(S[0:3]))
 	fmt.Printf("%c %s\n", S[5], S[1:3])
-
+	fmt.Println("**************************************")
 	question := "¿Cómo estás?"
 
 	for _, c := range question {
 		fmt.Printf("%c", c)
 	}
-
+	fmt.Println()
 	slice := make([]int, 10)
 
 	slice[0] = 100
