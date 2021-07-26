@@ -19,9 +19,34 @@ func ToCamelCase(s string) string {
 	return str.Join(sArr, "")
 }
 
+// Function foo accepts a slice of integers and returns the slice back.
+func foo(slice []int) []int {
+	slice[0] = 10
+	slice[1] = 20
+	return slice
+}
+
 func main() {
 	st := "the-stealth-warrior"
 	fmt.Println(ToCamelCase(st))
 	st = "The_Stealth_Warrior"
 	fmt.Println(ToCamelCase(st))
+	var S string
+	S = "qwerty"
+	fmt.Println(string(S[0:3]))
+	fmt.Printf("%c %s\n", S[5], S[1:3])
+
+	question := "¿Cómo estás?"
+
+	for _, c := range question {
+		fmt.Printf("%c", c)
+	}
+
+	slice := make([]int, 10)
+
+	slice[0] = 100
+	slice[1] = 200
+	fmt.Println(slice)
+	slice = foo(slice)
+	fmt.Println(slice)
 }
